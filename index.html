@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lunch Special</title>
+    
+    <style>
+        body {
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+        }
+        
+        form {
+            max-width: 1200px;
+            width: 100%;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            margin-top: 40px;
+        }
+
+        hr {
+            width: 95%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin-left: 40px;
+        }
+
+        .sections {
+            border: 1px solid gray;
+            padding: 0px 10px;
+            border-radius: 8px;
+            width: 93%;
+            margin: 20px 30px;
+            padding-bottom: 20px;
+        }
+
+        .orderTitle {
+            margin-top: -10px;
+            background-color: white;
+            padding: 1px 10px;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .nameInput {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nameInput {
+            width: 40%;
+            padding: 4px 0px;
+            text-indent: 10px;
+            margin: 10px 0px;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
+
+        #nameInput:focus {
+            outline: none;
+        }
+
+        .orderTypeContainer {
+            margin-top: 10px;
+        }
+        
+        .orderTypeContainer > div {
+            margin: 10px 10px;
+        }
+
+        .sandwichLabel {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .indent {
+            text-indent: 10px;
+            margin-top: 10px;
+        }
+
+        .sandwiches {
+            margin-left: 20px;
+        }
+
+        .sandDate {
+            margin: 20px;
+        }
+
+        #sendOrder {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #sendOrder > button {
+            width: 200px;
+            margin: 10px 40px;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 8px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <form>
+        <h1>Dado Tea Lunch Special</h1>
+        <hr/>
+        
+        <section>
+            <div>
+                <h3>Monday through Friday</h3>
+                <h4>11am-3pm</h4>
+                <h4>$9.95 plus tax</h4>
+            </div>
+            <i>Includes Sandwich, Snack and Drink.</i>
+        </section>
+
+        <!-- Order info -->
+
+        <section class="sections">
+            <h4 class="orderTitle">Order Information</h4>
+
+            <div class="nameInput">
+                <label for="name">Your Name</label>
+                <input type="name" name="name" id="nameInput"/>
+            </div>
+
+            <div class="orderTypeContainer">
+                <label for="orderType">Where will you eat your food?</label>
+                <div class="orderType">
+                    <input type="radio" value="carryout" name="orderType"/>
+                    <label for="carryout" checked>Carryout</label>
+                </div>
+
+                <div class="orderType">
+                    <input type="radio" value="dineIn" name="orderType" checked/>
+                    <label for="dineIn">Dine-in</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sandwiches -->
+
+        <section class="sections">
+            <h4 class="orderTitle">Sandwiches</h4>
+            <div class="sandwiches">
+                <div class="sandDate">
+                    <label for="sandwichMonday" class="sandwichLabel">Monday</label>
+                    <div class="indent">
+                        <input type="radio" value="tomMozz" name="sandwichMonday"/>
+                        <label for="tomMozz">Tomato Mozzarella</label>
+                    </div>
+                    <div class="indent">
+                        <input type="radio" name="sandwichMonday" value="chickSal"/>
+                        <label for="chickSal">Chicken Salad</label>
+                    </div>
+                </div>
+
+                <div class="sandDate">
+                    <label for="sandwichTuesday" class="sandwichLabel">Tuesday</label>
+                    <div class="indent">
+                        <input type="radio" value="greekSal" name="sandwichTuesday"/>
+                        <label for="greekSal">Greek Salad Wrap</label>
+                    </div>
+                    <div class="indent">
+                        <input type="radio" name="sandwichTuesday" value="totoWrap"/>
+                        <label for="totoWrap">Toto Wrap</label>
+                    </div>
+                </div>
+
+                <div class="sandDate">
+                    <label for="sandwichWednesday" class="sandwichLabel">Wednesday</label>
+                    <div class="indent">
+                        <input type="radio" value="redPep" name="sandwichWednesday"/>
+                        <label for="redPep">Red Pepper Hummus</label>
+                    </div>
+                    <div class="indent">
+                        <input type="radio" name="sandwichWednesday" value="roastTurkey"/>
+                        <label for="roastTurkey">Roasted Turkey</label>
+                    </div>
+                </div>
+
+                <div class="sandDate">
+                    <label for="sandwichThursday" class="sandwichLabel">Thursday</label>
+                    <div class="indent">
+                        <input type="radio" value="carrotGing" name="sandwichThursday"/>
+                        <label for="carrotGing">Carrot-Ginger Hummus Wrap</label>
+                    </div>
+                    <div class="indent">
+                        <input type="radio" name="sandwichThursday" value="eggSal"/>
+                        <label for="eggSal">Egg Salad</label>
+                    </div>
+                </div>
+
+                <div class="sandDate">
+                    <label for="sandwichFriday" class="sandwichLabel">Friday</label>
+                    <div class="indent">
+                        <input type="radio" value="dadoWrap" name="sandwichFriday"/>
+                        <label for="dadoWrap">Dado Wrap</label>
+                    </div>
+                    <div class="indent">
+                        <input type="radio" name="sandwichFriday" value="tunaSal"/>
+                        <label for="tunaSal">Tuna Salad</label>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div style="margin: 20px">
+                <input type="checkbox" name="glutenFree"/>
+                <label for="glutenFree">Gluten Free Bread (75 cents extra)</label>
+            </div>
+        </section>
+
+        <!-- Snacks -->
+
+        <section class="sections">
+            <h4 class="orderTitle">Snack</h4>
+            <label for="snackSelection">Snacks</label>
+            <div class="indent">
+                <input type="radio" name="snackSelection" value="apple" checked/>
+                <label for="apple">Apple</label>
+            </div>
+            <div class="indent">
+                <input type="radio" name="snackSelection" value="banana"/>
+                <label for="banana">Banana</label>
+            </div>
+            <div class="indent">
+                <input type="radio" name="snackSelection" value="chips"/>
+                <label for="chips">Potato Chips</label>
+            </div>
+        </section>
+
+        <!-- Drinks -->
+
+        <section class="sections">
+            <h4 class="orderTitle">Drink</h4>
+            <div style="display: flex; flex-direction: column;">
+                <label for="drinkOptions">Drinks</label>
+                <select name="drinkOptions" style="width: 20%; margin-top: 10px;">
+                    <optgroup label="Black Tea">
+                        <option>Hot Black Tea - Keemun</option>
+                        <option>Hot Black Tea - Decaf Keemun</option>
+                        <option>Iced Black Tea - Keemun</option>
+                        <option>Iced Black Tea - Decaf Keemun</option>
+                    </optgroup>
+                    <optgroup label="Green Tea">
+                        <option>Hot Green Tea - Sencha</option>
+                        <option>Hot Green Tea - Decaf</option>
+                        <option>Iced Green Tea - Sencha</option>
+                        <option>Iced Green Tea - Decaf</option>
+                    </optgroup>
+                    <optgroup label="Coffee">
+                        <option>Hot Coffee</option>
+                        <option>Hot Decaf Coffee</option>
+                        <option>Iced Coffee</option>
+                        <option>Iced Decaf Coffee</option>
+                    </optgroup>
+                    <optgroup label="Bubble tea ($1.50 extra)">
+                        <option>Bubble Tea</option>
+                    </optgroup>
+                </select>
+            </div>
+            <hr style="margin-top: 30px; width: 99%;"/>
+            <div style="margin-top: 20px;">
+                <input type="checkbox" name="drinkSize"/>
+                <label for="drinkSize">Large drink (75 cents extra)</label>
+            </div>
+        </section>
+        <div id="sendOrder"><button type="submit" style="cursor: pointer;" onclick="alert('Thanks for placing your order!')">Place Order</button></div>
+    </form>
+
+</body>
+</html>
